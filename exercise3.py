@@ -1,30 +1,17 @@
-#Diego Baez
-#COP2002.0T2
-#James Nichols
+#Brian Wasdin
+#COP2002-0T2
+#September 22, 2024
+#exercise3.py
+#A program used to determine who the manufacturer is for a NIC card and ask the user for the first six hex digits formated as XX:XX:XX and provide the manufacturer.
 
-#Create program welcome message
-print("           MAC Manufacturer Program")
-print("------------------------\n")
+# Manufacturer database (you can expand this)
+manufacturers = {
+    "00:00:17": "Oracle",
+    "00:07:E9": "Intel Corporation",
+    "04:27:28": "Microsoft Corporation",
+    "04:26:65": "Apple, Inc.",
+    "04:33:89": "Huawei Technologies Co.,Ltd",
+    "00:00:0C": "Cisco Systems, Inc",
+    "<Not valid value or not found>": "Unknown",}
 
-
-#Create a variable for the user to input a hex value
-hexCode = input("Enter the first 6 hex values of the MAC address (format as XX:XX:XX): ")
-
-#create an if elif else structure that assigns the variable corporation with a hex value
-if (hexCode=="00:00:17"):
-    corporation="Oracle"
-elif (hexCode=="00:07:E9"):
-    corporation="Intel Corporation"
-elif (hexCode=="04:27:28"):
-    corporation="Microsoft Corporation"
-elif (hexCode=="04:26:65"):
-    corporation="Apple, Inc."
-elif (hexCode=="04:33:89"):
-    corporation="Huawei Technologies Co.,Ltd"
-elif (hexCode=="00:00:0C"):
-    corporation="Cisco Systems, Inc"
-else:
-    corporation="Unknown"
-
-#Create the print statement that displays the outcome
-print(f"For {hexCode} the MAC manufacturer is {corporation}.")
+#Epilogue of the program.
