@@ -1,54 +1,47 @@
-# Gabriella Delgadillo (gcd125)
-# COP2002-0T2
-# September 20, 2024
-# Exercise 3
-# Program outputs manufacturer name based on MAC address 6 hex digit input
+# Sangki Jun
+# COP2002 0T2 
+# 9/19/24
+# Exercise 2
+# Prompt the user to enter a MAC address in XX:XX:XX format, then provide the manufacturer of that address
 
-# Introducing main function
-
+# main function
 def main():
-
-    # Print statement for the "MAC Manufacturer Program"
+    # prints output statements
+    print("MAC Manufacturer program")
+    print("------------------------")
+    print()
     
-    print("MAC Manufacturer Program \n------------------------\n")
+    # prompt the user to enter the 6 hex digits 
+    hexDigit = input("Enter the first 6 hex values of the MAC address (format as XX:XX:XX): ")
 
-    # Array containing existing 6 digit hex values for MAC adresses
-    
-    hexDigits = ["00:00:17", "00:07:E9", "04:27:28", "04:26:65", "04:33:89",
-                "00:00:0C"]
+    # if statement to check entered hex digit and output correct manufacturer
+    if (hexDigit == "00:00:17"):
+        print(f"For {hexDigit} the MAC manufacturer is Oracle.")
 
-    # User input for 6 digit hex values
-    
-    macAddress = input(
-        "Enter the first 6 hex values of the MAC address (format as XX:XX:XX): ")
+    # elif statement to check entered hex digit and output correct manufacturer
+    elif (hexDigit == "00:07:E9"):
+        print(f"For {hexDigit} the MAC manufacturer is Intel Corporation.")
+            
+    # elif statement to check entered hex digit and output correct manufacturer
+    elif (hexDigit == "04:27:28"):
+        print(f"For {hexDigit} the MAC manufacturer is Microsoft Corporation.")
 
-    # If statements for the different values of array hexDigits
-    
-    if macAddress == hexDigits[0]:
-        print(
-            f"For {hexDigits[0]} the MAC manufacturer is Oracle.")
-    elif macAddress == hexDigits[1]:
-        print(
-            f"For {hexDigits[1]} the MAC manufacturer is Intel Corporation.")
-    elif macAddress == hexDigits[2]:
-        print(
-            f"For {hexDigits[2]} the MAC manufacturer is Microsoft Corporation.")
-    elif macAddress == hexDigits[3]:
-        print(
-            f"For {hexDigits[3]} the MAC manufacturer is Apple, Inc.")
-    elif macAddress == hexDigits[4]:
-        print(
-            f"For {hexDigits[4]} the MAC manufacturer is Huawei Technologies Co.,Ltd.")
-    elif macAddress == hexDigits[5]:
-        print(
-            f"For {hexDigits[5]} the MAC manufacturer is Cisco Systems, Inc.")
+    # elif statement to check entered hex digit and output correct manufacturer
+    elif (hexDigit == "04:26:65"):
+        print(f"For {hexDigit} the MAC manufacturer is Apple, Inc.")
+
+    # elif statement to check entered hex digit and output correct manufacturer
+    elif (hexDigit == "04:33:89"):
+        print(f"For {hexDigit} the MAC manufacturer is Huawei Technologies Co.,Ltd.")
+
+    # elif statement to check entered hex digit and output correct manufacturer
+    elif (hexDigit == "00:00:0C"):
+        print(f"For {hexDigit} the MAC manufacturer is Cisco Systems, Inc.")
+
+    # if input is not one of MAC address listed above, output manufacturer is unknown
     else:
-        print(
-            f"For <Not valid value or not found> the MAC manufacturer is Unknown.")
+        print(f"For {hexDigit} the MAC manufacturer is unknown.")
 
-
-# Calling main function
-
-if(__name__=="__main__"):
+# if statment that calls main function to run program       
+if (__name__ == "__main__"):
     main()
-
