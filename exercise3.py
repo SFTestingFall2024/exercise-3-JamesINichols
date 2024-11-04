@@ -51,7 +51,7 @@ else:
           print(formato1)
           
      else:
-     print("This ID not is a valid format Unknown") #THE FORMATT IS DIFFERENT XX:XX:XX
+          print("This ID not is a valid format Unknown") #THE FORMATT IS DIFFERENT XX:XX:XX
 print(nic_Card)
 formato_matriz = f"{formato1}\n{formato2}\n{formato3}\n{formato4}\n{formato5}\n{formato6}"
 print(formato_matriz)
