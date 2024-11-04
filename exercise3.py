@@ -7,7 +7,7 @@ formato4=""
 formato5=""
 formato6=""
 while message.lower()!="q": # Controla el programa en general
-     message= input("Enter Q to quit or Continue to begin the program:  ")# Se debe tipear cualquier palabra para continua o Q para salir
+     # message= input("Enter Q to quit or Continue to begin the program:  ")# Se debe tipear cualquier palabra para continua o Q para salir
      nic_Card=input("Introduce The first 6 hex digits in formatted XX:XX:XX  ") # This will be list that input the Users
      if len(nic_Card)==8 and (nic_Card[2]==":")and (nic_Card[5]==":"):
       lista_Card=["0","0",":","0","0",":","1","7"]
