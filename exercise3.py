@@ -19,10 +19,8 @@ def main():
     elif(digits == HexDigits[5]): print("for " + HexDigits[5] + " the MAC manufacturer is " + Manufacturer[5])
     else: print(Manufacturer[6])
     print("\n")
-    main()
 
 def start():
     print("MAC manufacturer program" + "\n------------------------\n")
-    main()
 
 start()
