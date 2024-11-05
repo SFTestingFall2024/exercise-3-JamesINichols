@@ -33,12 +33,6 @@ def main():
     # Print MAC Manufacturers
     manufacturer = getMacManufacturer(hexValue)
     print(f"For {hexValue} the MAC manufacturer is {manufacturer}.\n")
-    
-    # Valid input ('y' or 'n') Required
-    repeat = input("Repeat (y=yes, n=no): ").lower()
-    print()
-    while repeat not in ['y', 'n']:
-        repeat = input("Not a valid option. Repeat (y=yes, n=no): ").lower()
 
     print("\nThe program has ended.")
 
