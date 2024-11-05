@@ -22,5 +22,6 @@ def main():
 
 def start():
     print("MAC manufacturer program" + "\n------------------------\n")
+    main()
 
 start()
