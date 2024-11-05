@@ -26,13 +26,9 @@ def main():
            MAC Manufacturer Program
 ------------------------
 """)
-    while True:
-        hex_input = input("Enter the first 6 hex values of the MAC address (format as XX:XX:XX): ")
-        manufacturer = get_manufacturer(hex_input)
-        if manufacturer == "Invalid format. Please use the correct format: XX:XX:XX":
-            continue
-        print(f"For {hex_input} the MAC manufacturer is {manufacturer}.")
-        break
+    hex_input = input("Enter the first 6 hex values of the MAC address (format as XX:XX:XX): ")
+    manufacturer = get_manufacturer(hex_input)
+    print(f"For {hex_input} the MAC manufacturer is {manufacturer}.")
 
 # Execute the main function
 if __name__ == "__main__":
