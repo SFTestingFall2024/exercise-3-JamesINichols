@@ -28,7 +28,7 @@ def main():
            print(f"For {user_input} the MAC manufacturer is {manufacturer[i]}.")
            break
    else:
-      print(f"For {user_input} the MAC manufacturer is {"Unknown"}.") 
+      print(f"For {user_input} the MAC manufacturer is Unknown.") 
 
 
 
