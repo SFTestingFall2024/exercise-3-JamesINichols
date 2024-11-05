@@ -1,42 +1,36 @@
-#Shemab1273
-# COP2002_0T2
-# 10/16/2024
-# If_Statement
-# Create a program to determaine the manufacturer of some NIC card 
+#("Name = Eric caison")
+
+#("Course ID and section = COP2002.OT2")
+
+#("Date = Octomber 9, 2024")
+
+#("program title = Loops")
+
+#("program Description = Manufacturer is for a NIC card")
+ 
+
+
+manufacturer = ["Oracle", "Intel Corporation", "Microsoft Corperation", "Apple, Inc", "Huawei Technologies","Cisco Systems, Inc"]
+mac_address = ["00:00:17", "00:07:E9", "04:27:28", "04:26:65", "04:33:89", "00:00:0C"]
 
 
 
+while True:
+    found = True
+    hex_digits = input("Enter hex digits:")
+    if hex_digits.lower() == 'exit':
+        break
+    for i in range(len(mac_address)):
+        if hex_digits == mac_address[i]:
+            print((manufacturer[i]))
+            found = True
+            if hex_digits != mac_address[i + 1]:
+                break
+        else:
+            found = False
+            
+    if found == False:
+        print("Mac address doesnt match up")
 
-print('MAC Manufacturer Program')         #Title of program
-print('-------------------------')
-print()
-
-
-#input   
-manufacturer =["Oracle", "Intel Corporation", "Microsoft Corporation", "Apple, Inc", "Huawei Tech Co., Ltd", "Cisco Sys, Inc"]   #variables
-hex_digits = ["00:00:17", "00:07:E9", "04:27:28", "04:26:65", "04:33:89", "00:00:0C"]    #values
-
-
-def main():
-
-#input statement that 6 hex values need to be entered
-   user_input = input("Enter the first 6 hex values of the MAC address (format as xx:xx:xx): ")    
-
-#use the lenght of hex_digits to identify the index
-   for i in range(len(hex_digits)):
-       if hex_digits[i] == user_input: 
-           print(f"For {user_input} the MAC manufacturer is {manufacturer[i]}.")
-           break
-   else:
-      print(f"For {user_input} the MAC manufacturer is Unknown.") 
-
-
-
-
-    
-
-   
-
-
-if(__name__=="__main__"):
+if __name__ == "__main__":
     main()
