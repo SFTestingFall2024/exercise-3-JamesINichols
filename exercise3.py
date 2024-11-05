@@ -1,8 +1,8 @@
 #Shemab1273
-COP2002_0T2
-10/16/2024
-If_Statement
-Create a program to determaine the manufacturer of some NIC card 
+# COP2002_0T2
+# 10/16/2024
+# If_Statement
+# Create a program to determaine the manufacturer of some NIC card 
 
 
 
