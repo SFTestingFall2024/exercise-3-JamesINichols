@@ -1,35 +1,37 @@
-# Define a dictionary to map the first 6 hex digits to the corresponding manufacturers
-mac_manufacturers = {
-    "00:00:17": "Oracle",
-    "00:07:E9": "Intel Corporation",
-    "04:27:28": "Microsoft Corporation",
-    "04:26:65": "Apple, Inc.",
-    "04:33:89": "Huawei Technologies Co.,Ltd",
-    "00:00:0C": "Cisco Systems, Inc",
-}
+# Logan Proferes (logiepro)[brackets are dev notes]
 
-# Define a function to look up the manufacturer by the given hex digits
-def get_manufacturer(hex_input):
-    hex_values = hex_input.split(":")
-    if len(hex_values) == 3:
-        manufacturer_key = ":".join(hex_values).lower()
-        if manufacturer_key in mac_manufacturers:
-            return mac_manufacturers[manufacturer_key]
-        else:
-            return "Unknown"
+# COP2002.OT2 F24
+
+# 9/26/24 [Updated 10/15/24]
+
+#MAC/NIC address(or exercise3.py)
+
+# Desc: Checks the inputed code for matches within the Manufacturers list and spits out something. 
+
+
+
+# Input statement to get the code for the manufacturers.
+print("MAC Manufactuer Program \n----------------------- \n")
+
+MACManufacturer = str(input("Enter the first 6 digits of your MAC adress. \n(Format as XX:XX:XX):  "))
+
+# Two lists to check the values from the input margin.
+# First list is the codes and the second is the manufacturers.
+# They're ordered so that codes share the same index as the company that made them. With the extra in manufacturers being a falesafe if there's no match.
+
+Codes_Base = ["00:00:17","00:07:E9","04:27:28","04:26:65","04:33:89","00:00:0C" ]
+Manufacturers = ["Oracle","Intel Corporation","Microsoft Corperation","Apple, Inc.","Huawei Technologiges Co., ltd","Cisco Systems, Inc.", "Unknown."]
+
+# This loop runs through the upper two arrays, which compares that values in there to the input. This loops to check each list entry for a match.
+# If it can't find a match, it runs the else code as a failsafe. i is used as a basic variable to force an increse in the loop if it doesn't find anything.
+
+i = 0
+while (i < len(Codes_Base)):
+    if (MACManufacturer == Codes_Base[i]):
+        print ("For " + MACManufacturer + " the MAC manufacturer is " + Manufacturers[i]+".")
+        break
     else:
-        return "Invalid format. Please use the correct format: XX:XX:XX"
-
-# Main program to interact with the user
-def main():
-    print("""
-           MAC Manufacturer Program
-------------------------
-""")
-    hex_input = input("Enter the first 6 hex values of the MAC address (format as XX:XX:XX): ")
-    manufacturer = get_manufacturer(hex_input)
-    print(f"For {hex_input} the MAC manufacturer is {manufacturer}.")
-
-# Execute the main function
-if __name__ == "__main__":
-    main()
+     i += 1
+else:
+ print ("For " + MACManufacturer + " the MAC manufacturer is " + Manufacturers[-1]+".")
+ 
